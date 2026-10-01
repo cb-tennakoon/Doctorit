@@ -80,7 +80,7 @@ export default function TermsOfServicePage() {
               <ul className="list-disc pl-6 space-y-2">
                 <li>Payment is generally required upon completion of the service before the device is released.</li>
                 <li>For larger projects or bulk work, advance payment or staged payments may be required.</li>
-                <li>We accept cash, bank transfer and other payment methods as agreed.</li>
+                <li>We accept cash, bank transfer, VISA, MAsterCard, American Express, QR payments and other payment methods as agreed.</li>
                 <li>Devices may be retained until full payment is received.</li>
               </ul>
             </div>

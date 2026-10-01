@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle,
@@ -14,8 +15,6 @@ import {
   Star,
   Quote,
   Network,
-  Server,
-  Cable,
 } from "lucide-react";
 
 const categories = [
@@ -186,6 +185,49 @@ const testimonials = [
   },
 ];
 
+const clients = [
+  {
+    logo: "/clients/logo.png",
+    name: "Web Hosting Services ",
+    // type: "Manufacturing",
+  },
+  {
+    logo: "/clients/avinda.jpg",
+    name: "IT Support",
+    // type: "Corporate Office",
+  },
+  {
+    logo: "/clients/capital.png",
+    name: "Total IT Support",
+    // type: "Hospital",
+  },
+  {
+    logo: "/clients/EFIC.png",
+    name: "Total IT Support   ",
+    // type: "Multi-Branch",
+  },
+  {
+    logo: "/clients/mizuho.jpg",
+    name: "Overall IT Support ",
+    // type: "Warehouse",
+  },
+  {
+    logo: "/clients/OTV.jpg",
+    name: "IT Infrastructure for Sri Lanka Project",
+    // type: "Institute",
+  },
+  {
+    logo: "/clients/ultratech.png",
+    name: "PC Service maintenance",
+    // type: "Professional",
+  },
+  {
+    logo: "/clients/vizuamatix.jpg",
+    name: "Repair Services ",
+    // type: "IT Services",
+  },
+];
+
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -196,7 +238,6 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-white">
-
       {/* ========== HERO ========== */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#021964] via-[#022978] to-[#03adeb] text-white">
         <div className="absolute inset-0 opacity-20">
@@ -212,12 +253,14 @@ export default function PortfolioPage() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Portfolio
-              <span className="block text-cyan-300">Network • Business • Industrial</span>
+              <span className="block text-cyan-300">
+                Network • Business • Industrial
+              </span>
             </h1>
 
             <p className="text-blue-100 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-              Specialized in enterprise network infrastructure, corporate office setups 
-              and large-scale industrial IT deployments across Sri Lanka.
+              Specialized in enterprise network infrastructure, corporate office
+              setups and large-scale industrial IT deployments across Sri Lanka.
             </p>
           </div>
         </div>
@@ -232,7 +275,9 @@ export default function PortfolioPage() {
                 <div className="text-3xl md:text-4xl font-bold text-blue-700 mb-1">
                   {stat.number}
                 </div>
-                <div className="text-slate-600 text-sm font-medium">{stat.label}</div>
+                <div className="text-slate-600 text-sm font-medium">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -243,14 +288,16 @@ export default function PortfolioPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 rounded-3xl p-8 text-center">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mx-auto mb-5 shadow-lg">
                 <Network className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Network Infrastructure</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">
+                Network Infrastructure
+              </h3>
               <p className="text-slate-600 text-sm">
-                Enterprise WiFi, structured cabling, managed switches, VLANs and multi-site connectivity.
+                Enterprise WiFi, structured cabling, managed switches, VLANs and
+                multi-site connectivity.
               </p>
             </div>
 
@@ -258,9 +305,12 @@ export default function PortfolioPage() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center mx-auto mb-5 shadow-lg">
                 <Building2 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Business & Corporate</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">
+                Business & Corporate
+              </h3>
               <p className="text-slate-600 text-sm">
-                Complete office IT setups, workstation deployment, shared systems and multi-branch solutions.
+                Complete office IT setups, workstation deployment, shared
+                systems and multi-branch solutions.
               </p>
             </div>
 
@@ -268,49 +318,56 @@ export default function PortfolioPage() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center mx-auto mb-5 shadow-lg">
                 <Factory className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Industrial Solutions</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">
+                Industrial Solutions
+              </h3>
               <p className="text-slate-600 text-sm">
-                Bulk PC deployment, factory networks, warehouse systems and large-scale infrastructure.
+                Bulk PC deployment, factory networks, warehouse systems and
+                large-scale infrastructure.
               </p>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* ========== MAJOR CLIENTS ========== */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">Trusted by Organizations</h2>
-            <p className="text-slate-600">Network • Business • Industrial clients across Sri Lanka</p>
-          </div>
+{/* ========== MAJOR CLIENTS ========== */}
+<section className="py-16 bg-slate-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-slate-900 mb-3">
+        Trusted by Organizations
+      </h2>
+      <p className="text-slate-600">
+        Network • Business • Industrial clients across Sri Lanka
+      </p>
+    </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-            {[
-              { initials: "MF", name: "Metro Factory Ltd", type: "Manufacturing" },
-              { initials: "SC", name: "Summit Corporate", type: "Corporate Office" },
-              { initials: "HC", name: "HealthCare Plus", type: "Hospital" },
-              { initials: "RT", name: "Retail Trend", type: "Multi-Branch" },
-              { initials: "NL", name: "Nexus Logistics", type: "Warehouse" },
-              { initials: "UE", name: "Unity Education", type: "Institute" },
-              { initials: "PS", name: "ProServe Lanka", type: "Professional" },
-              { initials: "TC", name: "TechCorp Solutions", type: "IT Services" },
-            ].map((client, i) => (
-              <div key={i} className="flex flex-col items-center justify-center bg-white border border-slate-200 rounded-2xl p-5 h-32 hover:shadow-md hover:border-blue-200 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center mb-2 shadow">
-                  <span className="text-white font-bold">{client.initials}</span>
-                </div>
-                <h4 className="font-semibold text-slate-800 text-sm text-center">{client.name}</h4>
-                <p className="text-xs text-slate-500">{client.type}</p>
-              </div>
-            ))}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+      {clients.map((client, i) => (
+        <div
+          key={i}
+          className="flex flex-col items-center justify-center bg-white border border-slate-200 rounded-2xl p-5 h-40 hover:shadow-md hover:border-blue-200 transition-all"
+        >
+          <div className="relative w-32 h-24 flex items-center justify-center mb-2">
+            <Image
+              src={client.logo}
+              alt={client.name}
+              width={140}
+              height={90}
+              className="object-contain max-h-24 w-auto"
+            />
           </div>
+          <h4 className="font-semibold text-slate-800 text-sm text-center leading-tight">
+            {client.name}
+          </h4>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ========== PROJECTS ========== */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
@@ -345,12 +402,24 @@ export default function PortfolioPage() {
               >
                 <div className="h-44 bg-gradient-to-br from-slate-100 to-slate-200 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {project.category === "Network" && <Wifi className="w-14 h-14 text-slate-300" />}
-                    {project.category === "Business" && <Building2 className="w-14 h-14 text-slate-300" />}
-                    {project.category === "Industrial" && <Factory className="w-14 h-14 text-slate-300" />}
-                    {project.category === "Laptop Repair" && <Laptop className="w-14 h-14 text-slate-300" />}
-                    {project.category === "Desktop / PC" && <Monitor className="w-14 h-14 text-slate-300" />}
-                    {project.category === "Printer" && <Printer className="w-14 h-14 text-slate-300" />}
+                    {project.category === "Network" && (
+                      <Wifi className="w-14 h-14 text-slate-300" />
+                    )}
+                    {project.category === "Business" && (
+                      <Building2 className="w-14 h-14 text-slate-300" />
+                    )}
+                    {project.category === "Industrial" && (
+                      <Factory className="w-14 h-14 text-slate-300" />
+                    )}
+                    {project.category === "Laptop Repair" && (
+                      <Laptop className="w-14 h-14 text-slate-300" />
+                    )}
+                    {project.category === "Desktop / PC" && (
+                      <Monitor className="w-14 h-14 text-slate-300" />
+                    )}
+                    {project.category === "Printer" && (
+                      <Printer className="w-14 h-14 text-slate-300" />
+                    )}
                   </div>
                   <div className="absolute top-4 left-4">
                     <span className="bg-white/90 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full">
@@ -363,14 +432,19 @@ export default function PortfolioPage() {
                   <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-blue-600 font-medium mb-3">{project.client}</p>
+                  <p className="text-sm text-blue-600 font-medium mb-3">
+                    {project.client}
+                  </p>
                   <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg">
+                      <span
+                        key={tag}
+                        className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -385,10 +459,10 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========== TESTIMONIALS ========== */}
-      <section className="py-20 bg-slate-50">
+      {/* <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -398,14 +472,22 @@ export default function PortfolioPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
             {testimonials.map((item, i) => (
-              <div key={i} className="bg-white border border-slate-200 rounded-3xl p-8 relative">
+              <div
+                key={i}
+                className="bg-white border border-slate-200 rounded-3xl p-8 relative"
+              >
                 <Quote className="w-10 h-10 text-blue-100 absolute top-6 right-6" />
                 <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, idx) => (
-                    <Star key={idx} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <Star
+                      key={idx}
+                      className="w-4 h-4 fill-amber-400 text-amber-400"
+                    />
                   ))}
                 </div>
-                <p className="text-slate-700 leading-relaxed mb-6">“{item.content}”</p>
+                <p className="text-slate-700 leading-relaxed mb-6">
+                  “{item.content}”
+                </p>
                 <div>
                   <div className="font-bold text-slate-900">{item.name}</div>
                   <div className="text-sm text-slate-500">{item.role}</div>
@@ -414,7 +496,7 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========== CTA ========== */}
       <section className="py-20 bg-gradient-to-r from-[#021964] via-[#022978] to-[#03adeb] text-white">
@@ -423,7 +505,8 @@ export default function PortfolioPage() {
             Need Network, Business or Industrial IT Support?
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            From enterprise networks to full office and factory deployments — we deliver professional results.
+            From enterprise networks to full office and factory deployments — we
+            deliver professional results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -434,7 +517,7 @@ export default function PortfolioPage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+94777143928"
+              href="tel:+94727348466"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 px-8 py-4 rounded-2xl font-semibold text-lg transition-all"
             >
               Call +94 727348466
