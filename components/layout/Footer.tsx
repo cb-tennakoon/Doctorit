@@ -62,9 +62,9 @@ export default function Footer() {
             <div className="flex gap-3 pt-2">
               {[
                 { icon: FaFacebookF, href: "https://www.facebook.com/doctorit.lk", label: "Facebook", hover: "hover:bg-blue-600" },
-                { icon: FaInstagram, href: "https://www.instagram.com/doctoritweb/", label: "Instagram", hover: "hover:bg-pink-600" },
+                { icon: FaInstagram, href: "https://www.instagram.com/doctorit.lk", label: "Instagram", hover: "hover:bg-pink-600" },
                 { icon: FaYoutube, href: "https://www.youtube.com/channel/UCrbeib7H3K-tQAVsN9MdlFQ", label: "YouTube", hover: "hover:bg-red-600" },
-                { icon: FaWhatsapp, href: "https://wa.me/94777143928", label: "WhatsApp", hover: "hover:bg-green-600" },
+                { icon: FaWhatsapp, href: "https://wa.me/94727348466", label: "WhatsApp", hover: "hover:bg-green-600" },
                 { icon: FaTiktok, href: "https://vm.tiktok.com/ZS9SGtk3kmhhE-6FB8R/", label: "TikTok", hover: "hover:bg-black" },
               ].map((social, i) => (
                 <a

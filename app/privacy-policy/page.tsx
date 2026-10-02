@@ -94,7 +94,6 @@ export default function PrivacyPolicyPage() {
               </p>
               <p className="mt-3">We may share your information only in the following cases:</p>
               <ul className="list-disc pl-6 space-y-1.5 mt-2">
-                <li>With trusted service partners when necessary to complete your repair (e.g. specialized parts suppliers)</li>
                 <li>When required by law or legal process</li>
                 <li>To protect our rights, safety, or property</li>
               </ul>
@@ -188,14 +187,14 @@ export default function PrivacyPolicyPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <a href="tel:+94777143928" className="hover:text-blue-600 transition">
-                    +94 777 143 928
+                  <a href="tel:+94727348466" className="hover:text-blue-600 transition">
+                    +94 72 734 8466
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <a href="mailto:doctoritweb@gmail.com" className="hover:text-blue-600 transition">
-                    doctoritweb@gmail.com
+                  <a href="mailto:info@doctorit.lk" className="hover:text-blue-600 transition">
+                    info@doctorit.lk
                   </a>
                 </div>
               </div>

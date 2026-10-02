@@ -184,14 +184,14 @@ export default function TermsOfServicePage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <a href="tel:+94777143928" className="hover:text-blue-600 transition">
-                    +94 777 143 928
+                  <a href="tel:+94727348466" className="hover:text-blue-600 transition">
+                    +94 72 734 8466
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <a href="mailto:doctoritweb@gmail.com" className="hover:text-blue-600 transition">
-                    doctoritweb@gmail.com
+                  <a href="mailto:info@doctorit.lk" className="hover:text-blue-600 transition">
+                    info@doctorit.lk
                   </a>
                 </div>
               </div>

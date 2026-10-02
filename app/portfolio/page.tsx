@@ -158,7 +158,7 @@ const projects = [
 ];
 
 const stats = [
-  { number: "1000+", label: "Business Clients" },
+  { number: "560+", label: "Business Clients" },
   { number: "25+", label: "Network Projects" },
   { number: "10+", label: "Industrial Deployments" },
   { number: "14+", label: "Years Experience" },

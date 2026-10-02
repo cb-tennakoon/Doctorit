@@ -38,7 +38,7 @@ const slides = [
     description:
       "Recover important files from dead drives, formatted disks and corrupted storage with high success rates.",
     image:
-      "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=1600&h=800&fit=crop",
+      "/DataRecovery.png",
     buttonText: "Recover Data",
     buttonLink: "/contact",
     badge: "High Success",
@@ -62,7 +62,7 @@ const slides = [
     description:
       "Complete PC setup for home users and bulk deployment for offices — fast, clean and optimized.",
     image:
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1600&h=800&fit=crop",
+      "/Upgardes.png",
     buttonText: "Setup & Upgrade",
     buttonLink: "/contact",
     badge: "Ready to Use",
